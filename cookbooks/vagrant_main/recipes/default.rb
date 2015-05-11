@@ -83,7 +83,7 @@ end
 package "phpmyadmin"
 
 # Install Xdebug
-php_pear "xdebug" do
+php_pear "xdebug-2.2.7" do
   # Specify that xdebug.so must be loaded as a zend extension
   zend_extensions ["xdebug.so"]
   directives(
