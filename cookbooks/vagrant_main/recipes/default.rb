@@ -83,7 +83,7 @@ end
 package "phpmyadmin"
 
 # Install Xdebug
-php_pear "xdebug-2.2.7" do
+php_pear "xdebug" do
   # Specify that xdebug.so must be loaded as a zend extension
   zend_extensions ["xdebug.so"]
   directives(
@@ -95,6 +95,7 @@ php_pear "xdebug-2.2.7" do
       :profiler_enable_trigger => 1
   )
   action :install
+  version "2.2.7"
   notifies :restart, resources("service[apache2]"), :delayed
 end
 template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
