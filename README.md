@@ -70,6 +70,11 @@ directory. The docroot of the new virtual host will be a directory within the
 `public/` folder matching the `host` you specified. Alternately you may specify
 a docroot explicitly by adding a `docroot` key in the json file.
 
+**After added your site, you have to run **
+```
+vagrant provision
+```
+
 ### MySQL
 
 The guests local 3306 port is available on the host at port 33066. It is also available on every domain. Logging in can be done with username=root, password=vagrant.
