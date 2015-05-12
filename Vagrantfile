@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network :private_network, ip: "192.168.33.10"
+  config.vm.network :private_network, ip: "192.168.33.54"
 
   # Set share folder permissions to 777 so that apache can write files
   config.vm.synced_folder ".", "/vagrant", mount_options: ['dmode=777','fmode=666']

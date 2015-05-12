@@ -1,8 +1,8 @@
 {
-    "id": "local",
-    "host": "local.dev",
+    "id": "local-php54",
+    "host": "local-php54.dev",
     "aliases": [
-        "www.local.dev", 
+        "www.local-php54.dev", 
         "test.com",
         "www.test.com"
     ]

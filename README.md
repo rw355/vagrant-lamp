@@ -75,6 +75,13 @@ a docroot explicitly by adding a `docroot` key in the json file.
 vagrant provision
 ```
 
+Add below to your local PC hosts:
+```
+192.168.33.54  local-php54.dev
+```
+
+When you add more virtual host, remember add them to your hosts as well.
+
 ### MySQL
 
 The guests local 3306 port is available on the host at port 33066. It is also available on every domain. Logging in can be done with username=root, password=vagrant.
@@ -83,7 +90,7 @@ The guests local 3306 port is available on the host at port 33066. It is also av
 
 phpMyAdmin is available on every domain. For example:
 
-    http://local.dev/phpmyadmin
+    http://local-php54.dev/phpmyadmin
 
 ### XDebug and webgrind
 
@@ -95,11 +102,11 @@ integrated debugger like Eclipse PDT, it will do this for you).
 XDebug is also configured to generate cachegrind profile output on demand by
 adding GET variable XDEBUG_PROFILE to your URL. For example:
 
-    http://local.dev/index.php?XDEBUG_PROFILE
+    http://local-php54.dev/index.php?XDEBUG_PROFILE
 
 Webgrind is available on each domain. For example:
 
-    http://local.dev/webgrind
+    http://local-php54.dev/webgrind
 
 It looks for cachegrind files in the `/tmp` directory, where xdebug leaves them.
 
@@ -119,7 +126,7 @@ happens to serve webgrind.
 
 ll emails sent via local mail transport are intercepted by [MailHog](http://github.com/mailhog/MailHog). So normally no email would be delivered outside of the virtual machine. Instead you can check messages using web frontend for MailHog, which is running on port 8025 and also available on every domain:
 
-    http://local.dev:8025
+    http://local-php54.dev:8025
 
 ### Composer
 
